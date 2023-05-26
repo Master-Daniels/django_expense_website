@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+            name="description"
+            content="An expense tracker to track and monitor your expenses both personal and in the work place"
+        />
+        <meta name="master-daniels" content="from a youtube tutorial" />
+        <title>ExTracker {% block title %}{% endblock title %}</title>
+        <link href={% static 'css/bootstrap.css' %} rel="stylesheet" /> <link rel="stylesheet" href={% static
+        'css/styles.css' %}>
+
+        <!-- Custom styles for this template -->
+        <link rel="stylesheet" href={% static 'css/dashboard.css' %}>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">{% block content %} {% endblock content %}</main>
+            </div>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+            integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"
+            integrity="sha384-gdQErvCNWvHQZj6XZM0dNsAoY4v+j5P1XDpNkcM3HJG1Yx04ecqIHk7+4VBOCHOG"
+            crossorigin="anonymous"
+        ></script>
+
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
