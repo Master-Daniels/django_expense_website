@@ -11,22 +11,13 @@
         <meta name="master-daniels" content="from a youtube tutorial" />
         <title>ExTracker {% block title %}{% endblock title %}</title>
         <link href={% static 'css/bootstrap.css' %} rel="stylesheet" /> <link rel="stylesheet" href={% static
-        'css/styles.css' %}>
+        'css/styles.css' %}> {% block page_css %}{% endblock page_css %}
 
         <!-- Custom styles for this template -->
         <link rel="stylesheet" href={% static 'css/dashboard.css' %}>
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="row">
-                <main role="main" class="col-md-12">
-                    <div class="card"></div>
-                    <div class="col-md-3"></div>
-                    <div class="col-md-6">{% block content %} {% endblock content %}</div>
-                    <div class="col-md-3"></div>
-                </main>
-            </div>
-        </div>
+        <main role="main">{% block content %} {% endblock content %}</main>
 
         <script
             src="https://code.jquery.com/jquery-3.7.0.slim.min.js"
